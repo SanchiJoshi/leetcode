@@ -5,7 +5,7 @@ class Solution {
         return result;
     }
     private void backtrack(int[] nums, int index, int target, int currentSum,
-                           List<Integer> currentList, List<List<Integer>> result) {
+        List<Integer> currentList, List<List<Integer>> result) {
         if (currentSum == target) {
             result.add(new ArrayList<>(currentList));
             return;
