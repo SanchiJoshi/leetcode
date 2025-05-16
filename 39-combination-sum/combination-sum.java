@@ -9,8 +9,7 @@ class Solution {
         if (currentSum == target) {
             result.add(new ArrayList<>(currentList));
             return;
-        }
-        if (currentSum > target || index >= nums.length) return;
+        } if (currentSum > target || index >= nums.length) return;
 
         backtrack(nums, index + 1, target, currentSum, currentList, result);
 
