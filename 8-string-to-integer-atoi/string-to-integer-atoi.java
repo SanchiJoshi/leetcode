@@ -6,6 +6,7 @@ class Solution {
 
         if (s.length() == 0) return 0;
 
+
         // Check for sign
         if (s.charAt(0) == '-') { sign = -1; i++; }
         else if (s.charAt(0) == '+') { i++; }
