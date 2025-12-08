@@ -12,19 +12,20 @@
  *         this.right = right;
  *     }
  * }
+ * preorder: root, left, right
  */
 class Solution {
-    public void preorderans(TreeNode root, List<Integer> l1){
-        if(root == null) return;
-        l1.add(root.val);
-        preorderans(root.left, l1);
-        preorderans(root.right, l1);
-    }
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        preorderans(root, ans);
+        preorder(root, ans);
         return ans;
-        
+    }
+    public static void preorder(TreeNode root, List<Integer> ans){
+        if(root == null){
+            return;
+        }
+        ans.add(root.val);
+        preorder(root.left, ans);
+        preorder(root.right, ans);
     }
 }
-
